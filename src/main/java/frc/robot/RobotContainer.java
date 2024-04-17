@@ -303,8 +303,8 @@ public class RobotContainer {
     m_driverController.povLeft()
         .whileTrue(Commands.run(() -> autoAimDrive(Rotation2d.fromDegrees(getFromAlliance(90, -90))), m_robotDrive));
 
-    /*m_driverController.leftTrigger()
-        .whileTrue(Commands.run(() -> autoAimDrive(Rotation2d.fromDegrees(getFromAlliance(-90, -90))), m_robotDrive).alongWith(m_attatchment.getAmpUpCommand())).onFalse(m_attatchment.getCancelAmpCommand());*/
+    m_driverController.leftTrigger()
+        .whileTrue(Commands.run(() -> autoAimDrive(Rotation2d.fromDegrees(getFromAlliance(-90, -90))), m_robotDrive));
 
     // Attatchment controls
 
@@ -345,7 +345,8 @@ public class RobotContainer {
 
     // Amp
 m_attachmentController.a()
-        .whileTrue(Commands.run(() -> autoAimDrive(Rotation2d.fromDegrees(getFromAlliance(-90, -90))), m_robotDrive).alongWith(m_attatchment.getAmpUpCommand())).onFalse(m_attatchment.getShootAmpCommand().andThen(m_attatchment.getCancelAmpCommand()));
+        .whileTrue(m_attatchment.getAmpUpCommand()).onFalse(m_attatchment.getShootAmpCommand().andThen(m_attatchment.getCancelAmpCommand()));
+
 
     // Arm/pivot positioning
 
@@ -440,26 +441,26 @@ m_attachmentController.a()
     Logger.recordOutput("MyPose", m_robotDrive.getPose());
 
     // CALIBRATION TESTING START
-    /*
-     * double caliX = SmartDashboard.getNumber("Cali X", 0);
-     * double caliY = SmartDashboard.getNumber("Cali Y", 0);
-     * 
-     * VisionConstants.calibrationPoseEstimator.setRobotToCameraTransform(
-     * new Transform3d(
-     * new Translation3d(Units.inchesToMeters(caliX), Units.inchesToMeters(caliY),
-     * -Units.inchesToMeters(-11)),
-     * new Rotation3d(0, Units.degreesToRadians(-35.5), Math.PI))
-     * );
-     * 
-     * var caliPose = VisionConstants.calibrationPoseEstimator.update();
-     * 
-     * if (caliPose.isPresent()) {
-     * m_calibrationField.setRobotPose(caliPose.get().estimatedPose.toPose2d());
-     * } else {
-     * m_calibrationField.setRobotPose(new Pose2d());
-     * }
-     * // CALIBRATION TESTING END
-     */
+    
+    /*double caliX = SmartDashboard.getNumber("Cali X", 0);
+      double caliY = SmartDashboard.getNumber("Cali Y", 0);
+      
+      VisionConstants.calibrationPoseEstimator.setRobotToCameraTransform(
+    new Transform3d(
+      new Translation3d(Units.inchesToMeters(caliX), Units.inchesToMeters(caliY),
+      -Units.inchesToMeters(-11)),
+      new Rotation3d(0, Units.degreesToRadians(-35.5), Math.PI))
+      );
+      
+      var caliPose = VisionConstants.calibrationPoseEstimator.update();
+      
+      if (caliPose.isPresent()) {
+      m_calibrationField.setRobotPose(caliPose.get().estimatedPose.toPose2d());
+      } else {
+      m_calibrationField.setRobotPose(new Pose2d());
+      }
+      // CALIBRATION TESTING END*/
+     
   }
 
   public void prepareTeleop() {

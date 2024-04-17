@@ -52,7 +52,7 @@ public class ShooterSubsystem extends SubsystemBase {
         double armSpeed = switch(m_state) {
             case kPreAmp -> -1;
             case kAmp -> -0.2;
-            case kPostAmp -> 0.3;
+            case kPostAmp -> 0.5; // increase post amp speed
             default -> 0;
         };
 

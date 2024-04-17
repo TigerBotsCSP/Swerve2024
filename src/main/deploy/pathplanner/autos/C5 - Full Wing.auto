@@ -1,0 +1,49 @@
+{
+  "version": 1.0,
+  "startingPose": {
+    "position": {
+      "x": 0.7904592112501756,
+      "y": 4.464534426699184
+    },
+    "rotation": -59.415789244662065
+  },
+  "command": {
+    "type": "sequential",
+    "data": {
+      "commands": [
+        {
+          "type": "path",
+          "data": {
+            "pathName": "Subwoofer Right to C5"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "C5 to Right"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "Connector"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "W3 To W2"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "W2 To W1"
+          }
+        }
+      ]
+    }
+  },
+  "folder": null,
+  "choreoAuto": false
+}

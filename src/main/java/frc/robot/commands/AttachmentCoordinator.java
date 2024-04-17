@@ -160,6 +160,13 @@ public class AttachmentCoordinator {
      * @return a command to intake
      */
     public Command getIntakeCommand() {
+        // Amp has priority over intake
+        if (m_shooter.getState() == ShooterState.kPreAmp
+        || m_shooter.getState() == ShooterState.kAmp
+        || m_shooter.getState() == ShooterState.kPostAmp) {
+            return Commands.none();
+        }
+
         return Commands.sequence(
                 Commands.runOnce(() -> startIntaking(), m_UTBIntaker, m_feeder),
                 Commands.waitUntil(m_beamBreak),
@@ -349,11 +356,11 @@ public class AttachmentCoordinator {
 
     public Command getShootAmpCommand() {
         return new InstantCommand(() -> m_feeder.setState(FeederState.kShooting)).andThen(
-                new WaitCommand(1),
+                new WaitCommand(0.5), // decrease post amp delay
                 new InstantCommand(() -> {
                     m_shooter.setState(ShooterState.kPostAmp);
                 }),
-                new WaitCommand(0.75),
+                new WaitCommand(0.33),
                 new InstantCommand(() -> {
                     m_shooter.setState(ShooterState.kStopped);
                     m_feeder.setState(FeederState.kStopped);

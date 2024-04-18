@@ -236,11 +236,11 @@ public class RobotContainer {
     }).asProxy());
 
     NamedCommands.registerCommand("pivotW2", Commands.runOnce(() -> {
-      m_attatchment.setCustomPosition(9.39);
+      m_attatchment.setCustomPosition(9.39+1);
     }).asProxy());
 
     NamedCommands.registerCommand("pivotW3", Commands.runOnce(() -> {
-      m_attatchment.setCustomPosition(8.05);
+      m_attatchment.setCustomPosition(8.05+1);
     }).asProxy());
 
     NamedCommands.registerCommand("beamBreak", m_attatchment.getBeamBreakCommand());

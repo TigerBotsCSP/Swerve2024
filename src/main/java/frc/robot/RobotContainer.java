@@ -365,7 +365,7 @@ m_attachmentController.a()
     // Lookup table
     double tableAngle = m_lookupTable.getOrDefault(Math.round(targetDistance * 10.0) / 10.0,
         (35.8266 * Math.pow(.7037, targetDistance)));
-    tableAngle -= 4;
+    tableAngle -= 3;
     tableAngle += adjustment;
     tableAngle += m_adjust;
 

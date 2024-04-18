@@ -62,9 +62,21 @@
                 "data": {
                   "commands": [
                     {
+                      "type": "named",
+                      "data": {
+                        "name": "disableVision"
+                      }
+                    },
+                    {
                       "type": "path",
                       "data": {
                         "pathName": "Subwoofer Right to C4"
+                      }
+                    },
+                    {
+                      "type": "named",
+                      "data": {
+                        "name": "enableVision"
                       }
                     },
                     {

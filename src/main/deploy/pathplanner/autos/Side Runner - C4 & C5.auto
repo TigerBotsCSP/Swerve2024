@@ -56,7 +56,7 @@
         {
           "type": "named",
           "data": {
-            "name": "adjustNo"
+            "name": "disableVision"
           }
         },
         {
@@ -168,9 +168,21 @@
                 "data": {
                   "commands": [
                     {
+                      "type": "named",
+                      "data": {
+                        "name": "disableVision"
+                      }
+                    },
+                    {
                       "type": "path",
                       "data": {
                         "pathName": "Right to C4"
+                      }
+                    },
+                    {
+                      "type": "named",
+                      "data": {
+                        "name": "enableVision"
                       }
                     },
                     {

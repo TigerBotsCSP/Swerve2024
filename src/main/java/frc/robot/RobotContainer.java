@@ -66,6 +66,7 @@ public class RobotContainer {
   private boolean m_autoAim = false;
   private double m_adjust = 0;
   private boolean m_vision = true;
+  public boolean m_auto = true;
 
   // The robot's subsystems
   public final DriveSubsystem m_robotDrive = new DriveSubsystem(() -> {
@@ -164,11 +165,11 @@ public class RobotContainer {
     m_lookupTable.put(3.70, 10.56);
     m_lookupTable.put(3.80, 10.42);
     m_lookupTable.put(3.90, 10.10);
-    m_lookupTable.put(4.00, 9.79);
-    m_lookupTable.put(4.10, 9.48);
+    m_lookupTable.put(4.00, 9.69);
+    m_lookupTable.put(4.10, 9.28);
     m_lookupTable.put(4.20, 9.19);
     m_lookupTable.put(4.30, 8.91);
-    m_lookupTable.put(4.40, 9.13);
+    m_lookupTable.put(4.40, 8.87);
     m_lookupTable.put(4.50, 8.77);
     m_lookupTable.put(4.60, 8.32);
     m_lookupTable.put(4.70, 7.87);
@@ -281,6 +282,7 @@ public class RobotContainer {
 
     // Auto aiming
     m_attachmentController.rightTrigger().whileTrue(Commands.run(() -> {
+      m_auto = false;
       autoAimDrive(getAimingVector(getTarget()).getAngle());
       autoAimPivot(0);
     }));
@@ -323,13 +325,13 @@ public class RobotContainer {
         .whileFalse(m_attatchment.getStopShootCommand());
 
     // Auto amp
-    m_driverController.y().onTrue(
+    m_driverController.a().onTrue(
         Commands.runOnce(() -> {
           AutoBuilder.pathfindThenFollowPath(
               new PathPlannerPath(
                   PathPlannerPath.bezierFromPoses(
-                      new Pose2d(1.85, 7.67, Rotation2d.fromDegrees(-90.0)),
-                      new Pose2d(1.85, 7.67, Rotation2d.fromDegrees(-90.0))),
+                      new Pose2d(1.85, 8.07, Rotation2d.fromDegrees(-90.0)),
+                      new Pose2d(1.85, 8.07, Rotation2d.fromDegrees(-90.0))),
                   new PathConstraints(3.0, 2.0, 2 * Math.PI, 4 * Math.PI), // The constraints for this path. If using a
                                                                            // differential drivetrain, the angular
                                                                            // constraints have no effect.
@@ -426,6 +428,9 @@ m_attachmentController.a()
     var pose = VisionConstants.rearCamPoseEstimator.update();
 
     if (pose.isPresent() && m_vision) {
+      if ((getAimingVector(getTarget()).getNorm() > 4.0) && m_auto) return; 
+
+
       Pose2d estimatedPose = pose.get().estimatedPose.toPose2d();
       double timestamp = pose.get().timestampSeconds;
 
@@ -469,6 +474,7 @@ m_attachmentController.a()
     m_attachmentController.getHID().setRumble(RumbleType.kBothRumble, 0);
     m_autoAim = false;
     m_vision = true;
+    m_auto = false;
 
     SmartDashboard.putNumber("Cali X", 0);
     SmartDashboard.putNumber("Cali Y", 0);

@@ -108,6 +108,12 @@
                       "data": {
                         "pathName": "C1 to W1"
                       }
+                    },
+                    {
+                      "type": "named",
+                      "data": {
+                        "name": "setX"
+                      }
                     }
                   ]
                 }

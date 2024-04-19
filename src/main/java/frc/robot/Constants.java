@@ -75,7 +75,7 @@ public final class Constants {
     public static final double kSpeakerMax = kGlobalMax;
 
     // Speaker positions
-    public static final double kSubwooferPos = 21; // left (good)
+    public static final double kSubwooferPos = 21-11; // left (good)
     public static final double kPodiumPos = 11; // up (good)
     public static final double kIntakePos = 7; // down (good) 11
     public static final double kAmpPos = 17; // 17
@@ -102,7 +102,7 @@ public final class Constants {
 
     // Shooting speed 0-1
     public static final double kShootSpeed = 1;
-    public static final double kAmpShotSpeed = 0.4;
+    public static final double kAmpShotSpeed = 0.5;
 
     // Shooting speed for subwoofer side
     public static final double kSubwooferSideShootSpeed = 1;

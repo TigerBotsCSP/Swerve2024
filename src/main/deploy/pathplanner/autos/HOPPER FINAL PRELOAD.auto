@@ -44,37 +44,7 @@
         {
           "type": "wait",
           "data": {
-            "waitTime": 0.5
-          }
-        },
-        {
-          "type": "named",
-          "data": {
-            "name": "startAutoAim"
-          }
-        },
-        {
-          "type": "path",
-          "data": {
-            "pathName": "Top to W2 Hopper"
-          }
-        },
-        {
-          "type": "wait",
-          "data": {
-            "waitTime": 2.5
-          }
-        },
-        {
-          "type": "path",
-          "data": {
-            "pathName": "W2 to W3 Hopper"
-          }
-        },
-        {
-          "type": "wait",
-          "data": {
-            "waitTime": 2.5
+            "waitTime": 2.0
           }
         },
         {

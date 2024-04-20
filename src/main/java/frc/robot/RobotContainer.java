@@ -358,7 +358,7 @@ m_attachmentController.a()
 
     m_attachmentController.povLeft().onTrue(m_attatchment.getSetCustomPivotPositionCommand(20));
 
-    m_attachmentController.povRight().onTrue(m_attatchment.getSetCustomPivotPositionCommand(17));
+    m_attachmentController.povRight().onTrue(m_attatchment.getSetCustomPivotPositionCommand(10));
   }
 
   public void autoAimPivot(float adjustment) {

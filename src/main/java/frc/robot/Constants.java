@@ -75,7 +75,7 @@ public final class Constants {
     public static final double kSpeakerMax = kGlobalMax;
 
     // Speaker positions
-    public static final double kSubwooferPos = 21-11; // left (good)
+    public static final double kSubwooferPos = 21; // left (good)
     public static final double kPodiumPos = 11; // up (good)
     public static final double kIntakePos = 7; // down (good) 11
     public static final double kAmpPos = 17; // 17

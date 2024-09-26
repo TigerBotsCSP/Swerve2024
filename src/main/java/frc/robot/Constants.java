@@ -84,7 +84,7 @@ public final class Constants {
     public static final double kPositionDeadzone = 2.0;
 
     public static final class PivotPID {
-      public static final double kP = 0.16;
+      public static final double kP = 0.1;
       public static final double kI = 1e-4;
       public static final double kD = 0.0058;
       public static final double kIz = 0;
@@ -247,8 +247,10 @@ public final class Constants {
     // Note: Negative shifts up and left (relative to field, not up on the field2d)
     // x=-8.55 y=-6.5 (OUR FIELD VALUES, revert back after comps)
     // WORLDS: 5.55, -7.55 for red x
+    // CRI: Based on actual field: Negative [\]shifts up for X, left for Y 
+    // (up is if you were at the top subwoofer and moved forward)
     public static final Transform3d rearCamOffset = new Transform3d(
-        new Translation3d(Units.inchesToMeters(-6.5), Units.inchesToMeters(-5.5), -Units.inchesToMeters(-11)),
+        new Translation3d(Units.inchesToMeters(-7.5), Units.inchesToMeters(-5.5), -Units.inchesToMeters(-11)),
         new Rotation3d(0, Units.degreesToRadians(-35.5), Math.PI));
     public static final PhotonPoseEstimator rearCamPoseEstimator = new PhotonPoseEstimator(aprilTagLayout,
         PoseStrategy.MULTI_TAG_PNP_ON_COPROCESSOR, rearCam, rearCamOffset);

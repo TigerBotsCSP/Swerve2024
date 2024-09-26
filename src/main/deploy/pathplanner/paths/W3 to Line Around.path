@@ -3,13 +3,13 @@
   "waypoints": [
     {
       "anchor": {
-        "x": 2.715093550487853,
-        "y": 4.217808936871006
+        "x": 2.784423388756855,
+        "y": 4.19218810001601
       },
       "prevControl": null,
       "nextControl": {
-        "x": 2.6968834980323986,
-        "y": 5.962439223456646
+        "x": 2.7662133363014005,
+        "y": 5.93681838660165
       },
       "isLocked": false,
       "linkedName": "W3"
@@ -81,7 +81,7 @@
     "rotateFast": false
   },
   "reversed": false,
-  "folder": "Five Piece",
+  "folder": null,
   "previewStartingState": {
     "rotation": -40.311498017004915,
     "velocity": 0

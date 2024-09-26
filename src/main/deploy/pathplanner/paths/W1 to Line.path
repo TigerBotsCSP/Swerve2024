@@ -3,13 +3,13 @@
   "waypoints": [
     {
       "anchor": {
-        "x": 2.6968834980323986,
-        "y": 6.88647140327456
+        "x": 2.7844233887519914,
+        "y": 6.935104675896556
       },
       "prevControl": null,
       "nextControl": {
-        "x": 2.7071708369028165,
-        "y": 6.88647140327456
+        "x": 2.7947107276224092,
+        "y": 6.935104675896556
       },
       "isLocked": false,
       "linkedName": "W1"
@@ -49,7 +49,7 @@
     "rotateFast": false
   },
   "reversed": false,
-  "folder": "Runners",
+  "folder": null,
   "previewStartingState": {
     "rotation": 43.152389734005425,
     "velocity": 0

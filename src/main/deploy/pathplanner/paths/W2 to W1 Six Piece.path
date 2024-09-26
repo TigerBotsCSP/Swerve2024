@@ -3,25 +3,25 @@
   "waypoints": [
     {
       "anchor": {
-        "x": 2.715093550487853,
-        "y": 5.53
+        "x": 2.7844233887519914,
+        "y": 5.553919733431884
       },
       "prevControl": null,
       "nextControl": {
-        "x": 1.8783493468240078,
-        "y": 5.571149355481668
+        "x": 1.947679185088146,
+        "y": 5.595069088913552
       },
       "isLocked": false,
       "linkedName": "W2"
     },
     {
       "anchor": {
-        "x": 2.6968834980323986,
-        "y": 6.88647140327456
+        "x": 2.7844233887519914,
+        "y": 6.935104675896556
       },
       "prevControl": {
-        "x": 1.8738963883990318,
-        "y": 6.598425914902881
+        "x": 1.9614362791186246,
+        "y": 6.647059187524878
       },
       "nextControl": null,
       "isLocked": false,
@@ -43,7 +43,7 @@
     "rotateFast": true
   },
   "reversed": false,
-  "folder": "Six Piece",
+  "folder": null,
   "previewStartingState": {
     "rotation": 0,
     "velocity": 0

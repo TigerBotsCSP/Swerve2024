@@ -16,12 +16,12 @@
     },
     {
       "anchor": {
-        "x": 2.715093550487853,
-        "y": 4.217808936871006
+        "x": 2.784423388756855,
+        "y": 4.19218810001601
       },
       "prevControl": {
-        "x": 2.331902366354947,
-        "y": 4.393815066360134
+        "x": 2.401232204623949,
+        "y": 4.368194229505138
       },
       "nextControl": null,
       "isLocked": false,
@@ -39,11 +39,11 @@
   },
   "goalEndState": {
     "velocity": 0,
-    "rotation": -0.7972931594915397,
+    "rotation": -25.338970848820328,
     "rotateFast": false
   },
   "reversed": false,
-  "folder": "Six Piece",
+  "folder": null,
   "previewStartingState": {
     "rotation": 0,
     "velocity": 0
